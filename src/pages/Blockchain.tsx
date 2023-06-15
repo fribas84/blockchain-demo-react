@@ -35,7 +35,7 @@ const Blockchain = () => {
         }
         setData();
     }, [])
-
+    
     useEffect(()=>{
         const _blockLength = ()=>{
             setBlockLength(blocks.length);
@@ -46,7 +46,7 @@ const Blockchain = () => {
     return (
         <>
             <h1 className="font-bold text-center text-4xl">Blockchain Demo</h1>
-            <p className="text-center">This site emulates a Proof-of-Work Blockchain</p>
+            <p className="text-center">This site emulates the mining process in a Proof-of-Work Blockchain</p>
             {blocks.map(blockMap => (
 
                 <Block
