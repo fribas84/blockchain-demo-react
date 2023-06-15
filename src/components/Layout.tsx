@@ -10,7 +10,7 @@ const Layout = () => {
                 <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
                         <Link
-                            className={`${location.pathname === '/' ? 'text-teal-600': 'text-teal-200'} block  mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4 ml-4'`}
+                            className={`${location.pathname === '/' ? 'text-teal-600' : 'text-teal-200'} block  mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4 ml-4'`}
                             to='/'> Home
                         </Link>
                         <Link
@@ -22,16 +22,14 @@ const Layout = () => {
                             to='/'> Address
                         </Link>
                         <Link
-                            className={`${location.pathname === '/blockchain' ? 'text-teal-600': 'text-teal-200'} block  mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4'`}
+                            className={`${location.pathname === '/blockchain' ? 'text-teal-600' : 'text-teal-200'} block  mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4'`}
                             to='/blockchain'> Blockchain
                         </Link>
                     </div>
 
                 </div>
             </nav>
-            <div>
-
-
+            <div className='md:container md:mx-auto md:my-4 '>
                 <Outlet />
             </div>
         </div>
