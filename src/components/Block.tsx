@@ -17,8 +17,7 @@ const Block = ({ height,
 
     const [attempt, setAttempt] = useState<number>(0);
 
-    console.log("height: ", height);
-    return (
+        return (
         <div>
             <div className='bg-white shadow rounded-sm md:w-3/4 mx-auto px-5 py-10 mt-20bg-white shadow rounded-sm md:w-3/4 mx-auto px-5 py-10 mt-20'>
                 <div className="mb-4">

@@ -12,9 +12,9 @@ interface IBlock {
 
 const Blockchain = () => {
     const [blocks, setBlocks] = useState<Array<IBlock>>([]);
-    const [blocksLength, setBlockLength] = useState<number>(0);
+    const [block, setBlock] = useState<IBlock>();
     
-
+  
     useEffect(() => {
         const setData = () => {
             const block1: IBlock = {
@@ -35,14 +35,18 @@ const Blockchain = () => {
         }
         setData();
     }, [])
-    
-    useEffect(()=>{
-        const _blockLength = ()=>{
-            setBlockLength(blocks.length);
+
+
+    const handleNewBlock =  (nonce:number, data:string,prevHash:string, hash:string):void =>{
+        const newBlock:IBlock = {
+            height:blocks.length,
+            nonce:nonce,
+            data:data,
+            prevHash:prevHash,
+            hash:hash
         }
-        _blockLength();
-    },[blocks])
-    console.log("blocksLength", blocks.length);
+        setBlocks([...blocks,newBlock]);
+    }
     return (
         <>
             <h1 className="font-bold text-center text-4xl">Blockchain Demo</h1>
@@ -60,8 +64,8 @@ const Blockchain = () => {
             ))}
 
             <Block
-                height={blocksLength}
-                key={blocksLength}
+                height={blocks.length}
+                key={blocks.length}
                 nonce={0}
                 data={""}
                 prevHash={""}
