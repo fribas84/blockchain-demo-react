@@ -9,8 +9,13 @@ I'm making this version built with:
 - Alchemy SDK
 - ether.js
 
-## Content
 
-### Hashing
-### Private Key / Public Key Generator
-### Blochain Demo 
+
+# Content
+
+## Hashing
+TODO
+## Private Key / Public Key Generator
+TODO
+## Blochain Demo 
+In Progress
